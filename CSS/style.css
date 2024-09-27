@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/* common */
+.common-wrapper{
+    margin: 80px 8%;
+}
+
+.common-wrapper h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color:orange;
+    font-size: 30px;
+}
+
+/* header */
+.header-inner{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+}
+
+.header-logo{
+    width: 150px
+    
+}
+
+.header-logo img {
+    width: 100%;
+}
+
+.header-nav{
+    display: flex;
+}
+
+.header-nav li {
+    margin:20px;
+}
+
+/* fv */
+.fv{}
+
+.fv-img{
+    width: 100%;
+}
+
+.fv-img img{
+    width: 100%;
+}
+
+/* about */
+.about{
+}
+
+.about-block{
+    display: flex;
+}
+
+.about-block-text{
+    width: 50%;
+    margin-right: 20px;
+    
+}
+
+.about-block-text h2{
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.about-block-text p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.about-block-img{
+    width: 50%;
+    margin-left: 20px;
+}
+
+.about-block-img img{
+    width: 100%;
+}
+
+/* gallary */
+.gallary{
+    background-color: rgba(225 228 232);
+    padding: 5px 0;
+}
+
+.gallary-inner span{
+    color: white;
+}
+
+.gallary-block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallary-main{
+    width: 80%;
+}
+
+.gallary-main img{
+    width: 100%;
+}
+
+.gallary-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+}
+
+.gallary-list img{
+    width: 100%;
+}
+
+/* news */
+.news{}
+
+.news-inner{}
+
+.news-block{
+    margin: 0 auto;
+    border: 1px solid ;
+    border-radius: 8px;
+    padding: 60px;
+    width: 60%;
+}
+
+.news-block-list{
+    display: flex;
+    padding: 10px 0;
+}
+
+.news-block-time{
+    margin-right: 50px;
+}
+
+.news-block-text{}
+
+/* price */
+.price{}
+
+.price-inner{}
+
+.price-block{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.price-block-table{
+    width: 100%;
+}
+
+.price-block-table tr,th,td{
+    border: 1px solid;
+    padding: 20px 60px;
+    vertical-align:middle;
+    line-height: 1.5;
+}
+
+.price-block-text{
+    font-size: 12px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* access */
+.access{}
+
+.access-inner{}
+
+.access-map{
+}
