@@ -1,51 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <title>OrangeHouse10</title>
-</head>
-<body>
-<!-- header -->
-<header class="header">
-    <div class="header-inner">
-        <div class="header-logo">
-            <img src="img/ロゴ.png" alt="ゲストハウスロゴ">
-        </div>
-        <ul class="header-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallary">Gallary</a></li>
-            <li><a href="#price">Price</a></li>
-            <li><a href="#access">Access</a></li>
-            <li><a href="https://www.instagram.com/orangehouse_10/"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-        <!-- ハンバーガーボタン -->
-        <div id="btn" class="hamburger__btn">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul id="menu" class="menu-sp">
-            <li class="header-logo"><img src="img/ロゴ.png" alt="ゲストハウスロゴ"></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallary">Gallary</a></li>
-            <li><a href="#price">Price</a></li>
-            <li><a href="#access">Access</a></li>
-            <li><a href="https://www.instagram.com/orangehouse_10/"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-        <!-- バツボタン -->
-        <div id="batsu" class="batsu"></div>
-        <!-- モーダルウィンドウ  -->
-        <div id="modal" class="modal-sp"></div>
-    </div>
-</header>
-<!-- header -->
-
+<?php get_header() ?>
 <!-- fv -->
 <section class="fv">
     <div class="fv-img">
-        <img src="img/fv.jpg" alt="ファーストビュー">
+        <img src="<?=get_template_directory_uri(); ?>/img/fv.jpg" alt="ファーストビュー">
     </div>
 </section>
 <!-- fv -->
@@ -60,7 +17,7 @@
                 <p>1階は古民家をリノベーションして快適な空間<br>キッチンや浴室も綺麗で快適<br>2階の寝室は、旅館のような和室で<br>ゆっくりとくつろげて旅の疲れを癒してくれます。</p>
             </div>
             <div class="about-block-img">
-                <img src="img/about.JPG" alt="内観">
+                <img src="<?=get_template_directory_uri(); ?>/img/about.JPG" alt="内観">
             </div>
         </div>
     </div>
@@ -73,14 +30,14 @@
         <h1 id="gallary"><span>Gallary</span></h1>
         <div class="gallary-block">
             <div class="gallary-main">
-                <img src="img/gallary1.jpg" alt="外観">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" alt="外観">
                 <p>広々した玄関先も自由に使える！（BBQ、花火etc...）</p>
             </div>
             <div class="gallary-list">
-                <img src="img/gallary2.JPG" alt="室内１">
-                <img src="img/gallary3.JPG" alt="室内２">
-                <img src="img/gallary4.JPG" alt="室内３">
-                <img src="img/gallary5.JPG" alt="室内４">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" alt="室内１">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" alt="室内２">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" alt="室内３">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" alt="室内４">
             </div>
         </div>
     </div>
@@ -136,22 +93,9 @@
 <section class="reservation">
     <div class="reservation-inner common-wrapper">
         <h1 id="reservation">Reservation</h1>
-        <div class="reservation-block">
-            <div class="reservation-label">
-                お名前<span>必須</span>
-            </div>
-            <input type="text" name="name" >
-            <!-- [text* your-name] -->
-            <div class="reservation-label">
-                メールアドレス<span>必須</span>
-                </div>
-            <!-- [email* your-email] -->
-            <div class="reservation-label">
-                お問い合わせ内容<span>必須</span>
-            </div>
-            <!-- [textarea* your-message] -->
-            <div class="reservation-submit">[submit "送信"]</div>
-        </div>
+        <article class="page-parts__article">
+            <?php the_content(); ?>
+        </article>
     </div>
 </section> 
 <!-- reservation -->
@@ -167,27 +111,4 @@
 </section>
 <!-- access -->
 
-<!-- forms -->
-
-<!-- forms -->
-
-<!-- footer -->
-<footer class="footer">
-    <div class="footer-inner common-wrapper">
-        <div class="fotter-text">
-            <p>◼︎住所：愛媛県西予市明浜町俵津3-155<br>
-            ◼︎Tel：0894-89-4020<br>
-            ◼︎E-mail：apparenouen.10@gmail.com<br>
-            ◼︎営業時間：9:00-17:00</p>
-        </div>
-    </div>
-    <div class="footer-copy">
-        <p>©︎2024 Orange House10, All rights reserved.</p>
-    </div>
-</footer>
-<!-- footer -->
-
-<script src="./hamburger.js"></script>
-</body>
-
-</html>
+<?php get_footer() ?>
