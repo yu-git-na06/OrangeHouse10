@@ -1,4 +1,6 @@
 @charset "UTF-8";
+body{
+}
 
 /* common */
 .common-wrapper{
@@ -10,19 +12,79 @@
     margin-bottom: 40px;
     color:orange;
     font-size: 30px;
+    display:block; /*ジャンプリンクの位置調整（起点）*/
+    padding-top: 130px;
+    margin-top: -130px;/*ジャンプリンクの位置調整（終点）*/
+}
+
+/* ハンバーガーボタン */
+.hamburger__btn{
+    display: none;
+}
+.menu-sp {
+    display: none;
+}
+
+/* バツボタン */
+.batsu {
+    display: none;
+}
+
+/* モーダルウィンドウ */
+.modal-sp{
+    display: none;
+}
+
+/* add */
+.add-header-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: block;
+    width: 40%;
+    height: 100vh;
+    padding: 20px 0;
+    z-index: 2;
+}
+
+.add-header-nav li{
+    font-weight: normal;
+    margin: 50px 0 0 20px;
+    font-size: 18px;
+    color: black;
+}
+
+.add-modal-sp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: #000000aa;
+    z-index: 1;
 }
 
 /* header */
+.header{
+    position: fixed; /*ヘッダー固定（起点）*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:white;
+    z-index: 100; /*ヘッダー固定（終点）*/
+}
 .header-inner{
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 5%;
+    height: 70px;
 }
 
 .header-logo{
     width: 150px
-    
 }
 
 .header-logo img {
@@ -33,13 +95,19 @@
     display: flex;
 }
 
+.header-nav a{
+    padding: 10px;
+}
+
 .header-nav li {
     margin:20px;
 }
 
 /* fv */
-.fv{}
-
+.fv {
+    margin-top: 130px;
+    
+}
 .fv-img{
     width: 100%;
 }
@@ -49,9 +117,6 @@
 }
 
 /* about */
-.about{
-}
-
 .about-block{
     display: flex;
 }
@@ -59,7 +124,6 @@
 .about-block-text{
     width: 50%;
     margin-right: 20px;
-    
 }
 
 .about-block-text h2{
@@ -104,6 +168,10 @@
     width: 100%;
 }
 
+.gallary-main p {
+    margin-top: 10px;
+}
+
 .gallary-list{
     display: flex;
     flex-direction: column;
@@ -116,10 +184,6 @@
 }
 
 /* news */
-.news{}
-
-.news-inner{}
-
 .news-block{
     margin: 0 auto;
     border: 1px solid ;
@@ -137,13 +201,7 @@
     margin-right: 50px;
 }
 
-.news-block-text{}
-
 /* price */
-.price{}
-
-.price-inner{}
-
 .price-block{
     width: 60%;
     margin: 0 auto;
@@ -167,9 +225,138 @@
 }
 
 /* access */
-.access{}
+/* Google Mapを囲う要素 */
+.access-map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 75%; /* 比率を4:3に固定 */
+　z-index: 0;
+}
+ 
+/* Google Mapのiframe */
+.access-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-.access-inner{}
+/* footer */
+.footer{
+    padding: 80px 0 30px 0;
+    background-color: rgb(87 85 85);
+    color:white;
+    line-height: 1.5;
+}
 
-.access-map{
+.footer-inner{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.footer-copy{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 800px){
+
+/* ハンバーガーボタン-mv */
+.hamburger__btn{
+    display: block;
+    font-size: 40px
+}
+
+/* header-mv */
+.header-logo{
+    width: 150px
+}
+
+.header-nav{
+    display: none;
+}
+
+/* about-mv */
+.about-block{
+    display: block;
+}
+
+.about-block-text{
+    width: 100%;
+    margin-right: 0px;
+}
+
+.about-block-img{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 40px;
+}
+
+.about-block-img img{
+    width: 100%;
+}
+
+/* gallary-mv */
+.gallary{
+    padding: 5px 0;
+}
+
+.gallary-block{
+    display: block;
+}
+
+.gallary-main{
+    width: 100%;
+}
+
+.gallary-list{
+    display: block;
+    width: 100%;
+}
+
+/* news-mv */
+.news-block{
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+}
+
+.news-block-list{
+    display: block;
+    padding: 20px 0;
+}
+
+.news-block-time{
+    margin-bottom: 10px;
+    margin-right: 0px;
+}
+
+/* price */
+.price-block{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.price-block-table{
+    width: 100%;
+}
+
+.price-block-table tr,th,td{
+    padding: 20px;
+}
+
+.price-block-text{
+    font-size: 12px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* footer */
+.footer-inner{
+    width: 80%;
+}
+    
 }
