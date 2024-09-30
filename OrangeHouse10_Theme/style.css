@@ -14,7 +14,7 @@ body{
 
 /* common */
 .common-wrapper{
-    margin: 80px 8%;
+    margin: 120px 8%;
 }
 
 .common-wrapper h1{
@@ -178,8 +178,8 @@ body{
     width: 100%;
 }
 
-.gallary-main p {
-    margin-top: 10px;
+.gallary-inner p {
+    margin-top: 15px;
 }
 
 .gallary-list{
@@ -235,9 +235,13 @@ body{
 }
 
 /* reservation */
+.reservation-inner{
+    width: 60%;
+    margin: 0 auto;
+}
+
 .reservation-block{
     margin: 60px auto;
-    width: 600px;
 }
 
 .reservation-block input,textarea{
@@ -245,7 +249,7 @@ body{
     border: none;
     border: solid 2px gray;
     border-radius: 5px;
-    padding: 15px;
+    padding: 15px 0;
     margin: 10px auto;
 }
 
@@ -268,7 +272,6 @@ body{
     max-width: 240px;
     margin: 40px auto;
 }
-/* reservation */
 
 /* access */
 /* Google Mapを囲う要素 */
@@ -398,6 +401,12 @@ body{
     font-size: 12px;
     margin: 15px 0;
     line-height: 1.5;
+}
+
+/* reservation */
+.reservation-inner{
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* footer */

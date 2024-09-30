@@ -13,6 +13,7 @@
     </div>
 </footer>
 <!-- footer -->
+ <script src="<?=get_template_directory_uri(); ?>/hamburger.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

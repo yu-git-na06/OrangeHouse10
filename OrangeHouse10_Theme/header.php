@@ -14,7 +14,7 @@
 <header class="header">
     <div class="header-inner">
         <div class="header-logo">
-            <img src="<?=get_template_directory_uri(); ?>/img/ロゴ.png" alt="ゲストハウスロゴ">
+            <a href="<?=home_url(); ?>"><img src="<?=get_template_directory_uri(); ?>/img/ロゴ.png" alt="ゲストハウスロゴ"></a>
         </div>
         <ul class="header-nav">
             <li><a href="#about">About</a></li>

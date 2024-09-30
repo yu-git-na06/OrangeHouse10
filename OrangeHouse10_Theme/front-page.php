@@ -31,7 +31,6 @@
         <div class="gallary-block">
             <div class="gallary-main">
                 <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" alt="外観">
-                <p>広々した玄関先も自由に使える！（BBQ、花火etc...）</p>
             </div>
             <div class="gallary-list">
                 <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" alt="室内１">
@@ -40,6 +39,7 @@
                 <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" alt="室内４">
             </div>
         </div>
+        <p>広々した玄関先も自由に使える！（BBQ、花火etc...）</p>
     </div>
 </section>
 <!-- gallary -->
