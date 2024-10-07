@@ -95,6 +95,7 @@ body{
 }
 
 .header-logo{
+    max-width: 80%;
     width: 150px
 }
 
@@ -188,6 +189,9 @@ body{
     flex-direction: column;
     justify-content: space-between;
     width: 18%;
+    overflow: scroll;
+    height: ; /*どう可変で指定するか？*/
+    scrollbar-color: white orange; /*2番目のトラックが効かない*/
 }
 
 .gallary-list img{
@@ -321,10 +325,6 @@ body{
 }
 
 /* header-mv */
-.header-logo{
-    width: 150px
-}
-
 .header-nav{
     display: none;
 }
@@ -365,6 +365,10 @@ body{
 .gallary-list{
     display: block;
     width: 100%;
+}
+
+.gallary-list img{
+    padding-top: 10px;
 }
 
 /* news-mv */
