@@ -95,7 +95,6 @@ body{
 }
 
 .header-logo{
-    max-width: 80%;
     width: 150px
 }
 
@@ -170,10 +169,12 @@ body{
 .gallary-block{
     display: flex;
     justify-content: space-between;
+    height: 100%;
+    max-height:1052px;
 }
 
 .gallary-main{
-    width: 80%;
+    width: 80%;   
 }
 
 .gallary-main img{
@@ -190,8 +191,20 @@ body{
     justify-content: space-between;
     width: 18%;
     overflow: scroll;
-    height: ; /*どう可変で指定するか？*/
-    scrollbar-color: white orange; /*2番目のトラックが効かない*/
+    overflow-x: hidden;
+}
+
+.gallary-list::-webkit-scrollbar {
+  width: 8px; /* 横幅 */
+}
+
+.gallary-list::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: white; /* ハンドルの色 */
+}
+
+.gallary-list::-webkit-scrollbar-track {
+  background: gray; /* 背景色 */
 }
 
 .gallary-list img{
@@ -253,7 +266,7 @@ body{
     width: 100%;
     border: none;
     border: solid 2px gray;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px 0;
     margin: 10px auto;
 }
@@ -275,7 +288,7 @@ body{
 .reservation-submit{
     text-align: center;
     max-width: 240px;
-    margin: 40px auto;
+    margin: 50px auto;
 }
 
 /* access */
@@ -325,6 +338,10 @@ body{
 }
 
 /* header-mv */
+.header-logo{
+    width: 150px
+}
+
 .header-nav{
     display: none;
 }
@@ -365,10 +382,6 @@ body{
 .gallary-list{
     display: block;
     width: 100%;
-}
-
-.gallary-list img{
-    padding-top: 10px;
 }
 
 /* news-mv */

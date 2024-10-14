@@ -21,3 +21,17 @@ batsu.addEventListener("click",function(){
    menu.classList.remove("add-header-nav");
    modal.classList.remove("add-modal-sp");
 });
+
+//クリックで画像切り替え
+'use strict'
+
+{
+    const main = document.getElementById('main'); /*id=mainを取得する*/
+    const thumbnails = document.querySelectorAll('.thumb-img'); /*imgデータをすべて読み込む*/
+    thumbnails.forEach(function(thumbnail){
+        thumbnail.addEventListener('click',function(){ /*取得した要素をクリックしたとき*/
+            let src = thumbnail.getAttribute('src'); /*thumbnailの中のsrc属性を取得し、変数srcに代入する*/
+            main.src = src; /*mainのsrc属性を「src」に置き換える*/
+        });
+    });
+}; 

@@ -30,13 +30,17 @@
         <h1 id="gallary"><span>Gallary</span></h1>
         <div class="gallary-block">
             <div class="gallary-main">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" alt="外観">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" id="main" alt="外観">
             </div>
             <div class="gallary-list">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" alt="室内１">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" alt="室内２">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" alt="室内３">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" alt="室内４">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" class="thumb-img" alt="室内１">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" class="thumb-img" alt="室内２">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" class="thumb-img" alt="室内３">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="室内４">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" class="thumb-img" alt="室内１">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" class="thumb-img" alt="室内２">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" class="thumb-img" alt="室内３">
+                <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="室内４">
             </div>
         </div>
         <p>広々した玄関先も自由に使える！（BBQ、花火etc...）</p>
