@@ -43,7 +43,9 @@
                 <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="室内４">
             </div>
         </div>
-        <p>広々した玄関先も自由に使える！（BBQ、花火etc...）</p>
+        <div class="caption" id="text">
+            <p>広々した玄関先も自由に使える！（BBQ、花火etc...）</p>
+        </div>
     </div>
 </section>
 <!-- gallary -->
