@@ -32,11 +32,21 @@ batsu.addEventListener("click",function(){
 
     // 画像と説明の対応表
     const descriptions = {
-        '<?=get_template_directory_uri(); ?>/img/gallary1.jpg': '画像の説明01',
-        '<?=get_template_directory_uri(); ?>/img/gallary2.JPG': '画像の説明02',
-        '<?=get_template_directory_uri(); ?>/img/gallary3.JPG': '画像の説明03',
-        '<?=get_template_directory_uri(); ?>/img/gallary4.JPG': '画像の説明04',
-        '<?=get_template_directory_uri(); ?>/img/gallary5.JPG': '画像の説明05',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary1.jpg': '画像の説明01',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary2.JPG': '画像の説明02',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary3.JPG': '画像の説明03',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary4.JPG': '画像の説明04',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary5.JPG': '画像の説明05',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary6.JPG': '画像の説明06',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary7.JPG': '画像の説明07',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary8.JPG': '画像の説明08',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary9.jpg': '画像の説明09',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary10.JPG': '画像の説明10',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary11.JPG': '画像の説明11',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary12.JPG': '画像の説明12',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary13.JPG': '画像の説明13',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary14.JPG': '画像の説明14',
+        'http://localhost:8888/orangehouse10_wordpress/wp-content/themes/OrangeHouse10_Theme/img/gallary15.jpg': '画像の説明15',
     };
 
     thumbnails.forEach(function(thumbnail) {
@@ -49,4 +59,33 @@ batsu.addEventListener("click",function(){
         });
     });
 };
+
+// DOMの読み込みが完了した時点で、要素の高さを調整する
+document.addEventListener("DOMContentLoaded", function () {
+  // 左側の最初の画像要素を取得
+  const left = document.querySelector(".gallary-main");
+  // 右側のコンテナ要素を取得
+  const right = document.querySelector(".gallary-right")
+  // 左側の画像の高さを右側のコンテナの高さに設定
+  right.style.height = left.offsetHeight + "px";
+})
+// ウィンドウのサイズ変更時に要素の高さを再調整する
+window.onresize = function () {
+  // 左側の最初の画像要素を取得
+  const left = document.querySelector(".gallary-main");
+  // 右側のコンテナ要素を取得
+  const right = document.querySelector(".gallary-right")
+  // 左側の画像の高さを右側のコンテナの高さに設定
+  right.style.height = left.offsetHeight + "px";
+};
+
+//loading
+//定数の定義
+const loading = document.getElementById('loading'); 
+//cssクラスを追加
+function animation(){
+    loading.classList.add('loaded');
+}
+//画像が読み込まれたらanimationを呼び出す
+window.addEventListener('load',animation);
 

@@ -1,0 +1,43 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.left {
+  width: calc(80% - 16px);
+}
+
+.left-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.left-img img {
+  width: 100%;
+  height: auto; /* 画像の縦横比を維持 */
+}
+
+.right {
+  width: 20%;
+  max-height: 100%; /* right の高さに制限 */
+  overflow-y: auto; /* スクロールを有効にする */
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%; /* 親要素の高さを継承 */
+}
+
+.right-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.right-img img {
+  width: 100%;
+  height: auto; /* 画像の縦横比を維持 */
+}

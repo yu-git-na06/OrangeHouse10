@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left"> *
+        <div class="left-img"> //
+          <img src="./assets/img/gallary1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="right"> *
+        <ul class="list"> 
+          <li class="right-img">
+            <img src="./assets/img/gallary1.jpg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary2.jpeg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary3.jpeg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary4.jpeg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary5.jpeg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary1.jpg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary2.jpeg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary3.jpeg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary4.jpeg" alt="" />
+          </li>
+          <li class="right-img">
+            <img src="./assets/img/gallary5.jpeg" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      // DOMの読み込みが完了した時点で、要素の高さを調整する
+      document.addEventListener("DOMContentLoaded", function () {
+        // 左側の最初の画像要素を取得
+        const left = document.querySelector(".left-img");
+        // 右側のコンテナ要素を取得
+        const right = document.querySelector(".right");
+
+        // 左側の画像の高さを右側のコンテナの高さに設定
+        right.style.height = left.offsetHeight + "px";
+      });
+
+      // ウィンドウのサイズ変更時に要素の高さを再調整する
+      window.onresize = function () {
+        // 左側の最初の画像要素を取得
+        const left = document.querySelector(".left-img");
+        // 右側のコンテナ要素を取得
+        const right = document.querySelector(".right");
+
+        // 左側の画像の高さを右側のコンテナの高さに設定
+        right.style.height = left.offsetHeight + "px";
+      };
+    </script>
+  </body>
+</html>

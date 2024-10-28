@@ -1,4 +1,10 @@
 <?php get_header() ?>
+<!-- loading -->
+<div id="loading">
+    <img src="<?=get_template_directory_uri(); ?>/img/logo.png" id="spin" alt="spin">
+</div>
+<!-- loading -->
+
 <!-- fv -->
 <section class="fv">
     <div class="fv-img">
@@ -29,18 +35,29 @@
     <div class="gallary-inner common-wrapper">
         <h1 id="gallary"><span>Gallary</span></h1>
         <div class="gallary-block">
-            <div class="gallary-main">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" id="main" alt="外観">
+            <div class="gallary-left">
+                <div class="gallary-main">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" id="main" alt="外観">
+                </div>
             </div>
-            <div class="gallary-list">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" class="thumb-img" alt="室内１">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" class="thumb-img" alt="室内２">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" class="thumb-img" alt="室内３">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="室内４">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" class="thumb-img" alt="室内１">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" class="thumb-img" alt="室内２">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" class="thumb-img" alt="室内３">
-                <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="室内４">
+            <div class="gallary-right"> 
+                <div class="gallary-list">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" class="thumb-img" alt="室内1">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" class="thumb-img" alt="室内2">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" class="thumb-img" alt="室内3">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" class="thumb-img" alt="室内4">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="室内5">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary6.JPG" class="thumb-img" alt="室内6">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary7.JPG" class="thumb-img" alt="室内7">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary8.JPG" class="thumb-img" alt="室内8">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary9.jpg" class="thumb-img" alt="室内9">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary10.JPG" class="thumb-img" alt="室内10">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary11.JPG" class="thumb-img" alt="室内11">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary12.JPG" class="thumb-img" alt="室内12">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary13.JPG" class="thumb-img" alt="室内13">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary14.JPG" class="thumb-img" alt="室内14">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary15.jpg" class="thumb-img" alt="室内15">
+                </div>
             </div>
         </div>
         <div class="caption" id="text">
@@ -55,18 +72,18 @@
     <div class="news-inner common-wrapper">
         <h1 id="news">News</h1>
         <div class="news-block">
-            <div class="news-block-list">
-                <div class="news-block-time">2024.09.01</div>
-                <div class="news-block-text">テキストテキストテキストテキスト</div>
-            </div>
-            <div class="news-block-list">
-                <div class="news-block-time">2024.09.01</div>
-                <div class="news-block-text">テキストテキストテキストテキスト</div>
-            </div>
-            <div class="news-block-list">
-                <div class="news-block-time">2024.09.01</div>
-                <div class="news-block-text">テキストテキストテキストテキスト</div>
-            </div>
+            <?php $query = new WP_Query( 'cat=-4' ); ?>
+            <?php query_posts('posts_per_page='); ?> 
+            <?php if($query -> have_posts()):
+                while($query -> have_posts()): $query -> the_post(); ?>
+                        <article>
+                            <a href="<?php the_permalink(); ?>" class="news-block-list">
+                                <time class="news-block-time"><?=get_the_date();?></time>
+                                <h3 class="news-block-text"><?php the_title() ?></h3>
+                            </a>
+                        </article>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -100,7 +117,17 @@
     <div class="reservation-inner common-wrapper">
         <h1 id="reservation">Reservation</h1>
         <article class="page-parts__article">
-            <?php the_content(); ?>
+            <?php 
+            $query = new WP_Query( 'cat=4' ); 
+            if ( $query->have_posts() ) : 
+                while ( $query->have_posts() ) : $query->the_post(); ?>
+                    <div class="post-content">
+                        <?php the_content(); ?>
+                    </div>
+                <?php endwhile; 
+                wp_reset_postdata(); 
+            else : ?>
+            <?php endif; ?>
         </article>
     </div>
 </section> 

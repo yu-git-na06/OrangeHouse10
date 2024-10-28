@@ -19,6 +19,7 @@
         <ul class="header-nav">
             <li><a href="#about">About</a></li>
             <li><a href="#gallary">Gallary</a></li>
+            <li><a href="#news">News</a></li>
             <li><a href="#price">Price</a></li>
             <li><a href="#access">Access</a></li>
             <li><a href="https://www.instagram.com/orangehouse_10/"><i class="fab fa-instagram"></i></a></li>
@@ -31,6 +32,7 @@
             <li class="header-logo"><img src="<?=get_template_directory_uri(); ?>/img/logo.png" alt="ゲストハウスロゴ">
             <li><a href="#about">About</a></li>
             <li><a href="#gallary">Gallary</a></li>
+            <li><a href="#news">News</a></li>
             <li><a href="#price">Price</a></li>
             <li><a href="#access">Access</a></li>
             <li><a href="https://www.instagram.com/orangehouse_10/"><i class="fab fa-instagram"></i></a></li>

@@ -1,0 +1,62 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.left {
+  width: calc(80% - 16px);
+}
+
+.left-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.left-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 1; /* 初期表示は1 */
+  transition: opacity 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+/* src変更時のフェードインアニメーション用クラス */
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.right {
+  width: 20%;
+  max-height: 100%; /* right の高さに制限 */
+  overflow-y: auto; /* スクロールを有効にする */
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%; /* 親要素の高さを継承 */
+}
+
+.right-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.right-img img {
+  width: 100%;
+  height: auto; /* 画像の縦横比を維持 */
+}
