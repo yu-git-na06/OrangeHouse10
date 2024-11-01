@@ -5,11 +5,7 @@ Theme Name: OrangeHouse10
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 html, body {
     font-size: 16px;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-body{
-
+    font-family: "FOT-筑紫Aオールド明朝 Pr6 R", "AGaramondPro-Regular", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
 }
 
 /* common */
@@ -19,7 +15,7 @@ body{
 
 .common-wrapper h1{
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     color:orange;
     font-size: 30px;
     display:block; /*ジャンプリンクの位置調整（起点）*/
@@ -83,6 +79,7 @@ body{
     left: 0;
     width: 100%;
     background-color:white;
+    opacity: 0.9;
     z-index: 100; /*ヘッダー固定（終点）*/
 }
 .header-inner{
@@ -398,9 +395,23 @@ body{
 }
 
 /* 投稿ページ */
-.detail-page-img {
+.detail-page-block {
     margin-top: 130px;
-    opacity: 0.6;
+}
+
+.detail-page-text{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    z-index: 1;
+    font-size: 50px;
+    border-bottom: solid 1px;
+    padding-bottom: 10px;
+}
+
+.detail-page-img {
+    position: relative;
+    opacity: 0.3;
     width: 100%;
 }
 
@@ -424,18 +435,16 @@ body{
 /* 画像アニメーション */
 @keyframes fadeIn {
     from {
-      opacity: 0;
-      width: 0;
+      opacity: 0.5;
     }
     to {
       opacity: 1;
-      width: 100%;
     }
   }
   
   /* src変更時のフェードインアニメーション用クラス */
   .fade-in {
-    animation: fadeIn 1.5s ease-out forwards;
+    animation: fadeIn 2s ease-out forwards;
   }
 
 @media screen and (max-width: 800px){
@@ -476,21 +485,28 @@ body{
 }
 
 /* gallary-mv */
-.gallary{
-    padding: 5px 0;
-}
-
 .gallary-block{
     display: block;
 }
 
-.gallary-main{
+.gallary-left {
+    display: none;
+}
+
+.gallary-right{
     width: 100%;
+    overflow-x: scroll;
 }
 
 .gallary-list{
-    display: block;
+    display: flex;
+    height: 100%; /* 親要素の高さを継承 */
+}
+
+.gallary-list img{
     width: 100%;
+    min-width: 100%;
+    height:auto;
 }
 
 /* news-mv */

@@ -6,8 +6,13 @@ if(have_posts()):
 ?>
 
 <section>
-    <div class="detail-page-img">
-        <img src="<?=get_template_directory_uri(); ?>/img/single.jpg" alt="玄関">
+    <div class="detail-page-block">
+        <div class="detail-page-text">
+            <h1>News</h1>
+        </div>  
+        <div class="detail-page-img">
+            <img src="<?=get_template_directory_uri(); ?>/img/single.jpg" alt="玄関">
+        </div>
     </div>
     <div class="detail-page-inner">
         <div  class="detail-page-title">

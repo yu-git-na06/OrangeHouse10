@@ -7,7 +7,7 @@ if (have_posts()) :
 <!-- 記事ヘッダー -->
 <div class="page-parts__header">
     <!-- 画像 -->
-    <?php the_post_thumbnail('full'); ?>
+    <?php the_post_thumbnail('full'); ?>  
     <!-- タイトル -->
     <div class="page-parts__header-title">
         <h2><?php the_title(); ?></h2>
