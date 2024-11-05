@@ -4,7 +4,7 @@
         <div class="fotter-text">
             <p>◼︎住所：愛媛県西予市明浜町俵津3-155<br>
             ◼︎Tel：0894-89-4020<br>
-            ◼︎E-mail：apparenouen.10@gmail.com<br>
+            ◼︎E-mail：nicomaru.250@nicomaru.ne.jp<br>
             ◼︎営業時間：9:00-17:00</p>
         </div>
     </div>
@@ -13,7 +13,7 @@
     </div>
 </footer>
 <!-- footer -->
-<script src="<?=get_template_directory_uri(); ?>/hamburger.js"></script>
+<script src="<?=get_template_directory_uri(); ?>/script.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

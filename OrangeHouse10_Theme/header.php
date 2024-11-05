@@ -21,6 +21,7 @@
             <li><a href="#gallary">Gallary</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#price">Price</a></li>
+            <li><a href="#reservation">Reservation</a></li>
             <li><a href="#access">Access</a></li>
             <li><a href="https://www.instagram.com/orangehouse_10/"><i class="fab fa-instagram"></i></a></li>
         </ul>
@@ -30,11 +31,12 @@
         </div>
         <ul id="menu" class="menu-sp">
             <li class="header-logo"><img src="<?=get_template_directory_uri(); ?>/img/logo.png" alt="ゲストハウスロゴ">
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallary">Gallary</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#price">Price</a></li>
-            <li><a href="#access">Access</a></li>
+            <li><a href="https://www.orange-house10.com/#about">About</a></li>
+            <li><a href="https://www.orange-house10.com/#gallary">Gallary</a></li>
+            <li><a href="https://www.orange-house10.com/#news">News</a></li>
+            <li><a href="https://www.orange-house10.com/#price">Price</a></li>
+            <li><a href="https://www.orange-house10.com/#reservation">Reservation</a></li>
+            <li><a href="https://www.orange-house10.com/#access">Access</a></li>
             <li><a href="https://www.instagram.com/orangehouse_10/"><i class="fab fa-instagram"></i></a></li>
         </ul>
         <!-- バツボタン -->

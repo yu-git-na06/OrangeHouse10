@@ -118,7 +118,7 @@ html, body {
     content: '';
     width: 100%;
     height: 2px;
-    background: #000000;
+    background: orange;
     bottom: -1px;
     transform: scale(0, 1);
     transform-origin: right top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
@@ -132,7 +132,7 @@ html, body {
 
 /* fv */
 .fv {
-    margin-top: 100px;
+    margin-top: 130px;
     
 }
 .fv-img{
@@ -150,31 +150,34 @@ html, body {
 
 .about-block-text{
     width: 50%;
-    margin-right: 20px;
+    margin-right: 5%;
+    line-height:1.7;
 }
 
 .about-block-text h2{
     margin-bottom: 30px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .about-block-text p{
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 16px;
+    font-family:serif;
 }
 
 .about-block-img{
     width: 50%;
-    margin-left: 20px;
+    margin-left: 5%;
 }
 
 .about-block-img img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* gallary */
 .gallary{
-    background-color: rgba(225 228 232);
+    background-color: #E6D5BA;
     padding: 5px 0;
 }
 
@@ -182,11 +185,27 @@ html, body {
     color: white;
 }
 
+.gallary-inner {
+    margin: 120px 10%;
+}
+
+.gallary-inner h1{
+    text-align: center;
+    margin-bottom: 60px;
+    color:orange;
+    font-size: 30px;
+    display:block; /*ジャンプリンクの位置調整（起点）*/
+    padding-top: 130px;
+    margin-top: -130px;/*ジャンプリンクの位置調整（終点）*/
+}
+
 .gallary-block{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 85%;
     overflow: hidden;
+    margin: 0 auto;
+    
 }
 
 .gallary-left {
@@ -204,7 +223,9 @@ html, body {
 }
 
 .gallary-inner p {
-    margin-top: 15px;
+    width: 85%;
+    margin: 15px auto;
+    color:gray;
 }
 
 .gallary-right{
@@ -242,8 +263,6 @@ html, body {
 .gallary-list::-webkit-scrollbar-track {
   background: gray; /* 背景色 */
 }
-
-
 
 /* news */
 .news-block{
@@ -288,29 +307,45 @@ html, body {
 
 /* reservation */
 .reservation-inner{
-    width: 60%;
     margin: 0 auto;
 }
 
-.reservation-block{
-    margin: 60px auto;
+.reservation-btn {
+    margin:80px;
+    text-align: center;
 }
 
-.reservation-block input,textarea{
-    width: 100%;
-    border: none;
-    border: solid 2px gray;
-    border-radius: 10px;
-    padding: 15px 0;
-    margin: 10px auto;
-}
-
-.reservation-label{
+.reservation-btn a{
+    padding: 25px 60px;
+    background-color: green;
+    border-radius: 50px;
     font-weight: bold;
-    margin: 20px 0;
+    color: white;
+    width: 170px;
+    font-size: 16px;
 }
 
-.reservation-label span{
+.reservation-btn a:hover{
+    background-color: orange; 
+}
+
+/* 予約フォーム */
+.ContactForm7-contact {
+    max-width: 850px;
+}
+
+.ContactForm7-contact__title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.ContactForm7-contact__label {
+    font-weight: bold;
+}
+
+.ContactForm7-contact__label span {
     font-weight: bold;
     color: #fff;
     background-color: orange;
@@ -319,19 +354,57 @@ html, body {
     font-size: 0.6rem;
 }
 
-.reservation-submit{
-    text-align: center;
-    max-width: 240px;
-    margin: 50px auto;
+.ContactForm7-contact input {
+    width: 100%;
+    border: none;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
 }
 
-.wpcf7-submit {
-    background-color: orange;
-    color: white;
-    border: none !important; 
-    border-radius: 50px  !important;
-    font-weight: bold;
+.ContactForm7-contact select {
+    width: 20%;
+    border: none;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
 }
+
+.ContactForm7-contact__submit {
+    text-align: center;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.ContactForm7-contact input[type="submit"] {
+    color: #fff;
+    background-color: gray;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    margin-top: 100px;
+}
+
+.ContactForm7-contact input[type="submit"] :hover{
+    background-color: orange;
+}
+
+
+/* 送信時のメッセージ エラー文 / 送信完了文 */
+.wpcf7-not-valid-tip{
+    display: block;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.wpcf7-response-output{
+    margin: 60px auto;
+    max-width: 850px;
+}
+
+.screen-reader-response{display: none;}
+
 
 /* access */
 /* Google Mapを囲う要素 */
@@ -421,7 +494,34 @@ html, body {
 
 .detail-page-inner {
     margin: 120px 15%;
+    line-height: 2;
 }
+
+.detail-page-inner h1 {
+    background: linear-gradient(transparent 80%, orange 100%);
+    width: 100%;
+}
+
+.detail-page-inner h2 {
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-left: solid 5px orange;/*左線*/
+    margin: 40px 0 20px 0;
+
+}
+
+.detail-page-inner h3 {
+    border-bottom: solid 3px #494949;
+    font-weight: bold;
+    margin: 15px 0 ;
+}
+
+
+.detail-page-inner h4 {
+    font-weight: bold;
+}
+
 .detail-page-title{
     margin-top: 150px;
     font-size: 32px;
@@ -432,21 +532,6 @@ html, body {
     font-size: 20px;
 }
 
-/* 画像アニメーション */
-@keyframes fadeIn {
-    from {
-      opacity: 0.5;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* src変更時のフェードインアニメーション用クラス */
-  .fade-in {
-    animation: fadeIn 2s ease-out forwards;
-  }
-
 @media screen and (max-width: 800px){
 
 /* ハンバーガーボタン-mv */
@@ -455,13 +540,33 @@ html, body {
     font-size: 40px
 }
 
+/* common */
+.common-wrapper h1{
+    padding-top: 80px;
+    margin-top: -130px;/*ジャンプリンクの位置調整（終点）*/
+}
+
 /* header-mv */
+.header-inner{
+    height: 20px;
+}
 .header-logo{
-    width: 150px
+    width: 120px
 }
 
 .header-nav{
     display: none;
+}
+
+/* fv-mv */
+.fv {
+    margin-top: 0;
+}
+
+.fv-img img {
+    height: 70vh;
+    object-fit: cover;
+    margin-top: 80px;
 }
 
 /* about-mv */
@@ -474,6 +579,10 @@ html, body {
     margin-right: 0px;
 }
 
+.about-block-text h2{
+    font-size: 24px;
+}
+
 .about-block-img{
     width: 100%;
     margin-left: 0px;
@@ -482,11 +591,21 @@ html, body {
 
 .about-block-img img{
     width: 100%;
+    height: 50vh;
 }
 
 /* gallary-mv */
 .gallary-block{
     display: block;
+    width: 100%;
+}
+
+.gallary-inner {
+    margin: 60px 0;
+}
+    
+.gallary-inner P {
+    width: 100%;
 }
 
 .gallary-left {
@@ -506,7 +625,13 @@ html, body {
 .gallary-list img{
     width: 100%;
     min-width: 100%;
-    height:auto;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.caption {
+    margin: 0 10%;
 }
 
 /* news-mv */
@@ -548,13 +673,56 @@ html, body {
 
 /* reservation */
 .reservation-inner{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+}
+
+.reservation-btn a{
+    padding: 25px 40px;
+    width: 140px;
 }
 
 /* footer */
 .footer-inner{
     width: 80%;
 }
-    
+
+/* ContactForm7  */
+.ContactForm7-contact input {
+    width: 90%;
 }
+
+.ContactForm7-contact {
+    margin: 15px;
+}
+
+/* detail */
+.detail-page-inner {
+    margin: 120px 5%;
+}
+
+/* loading-mv */
+.spin {
+    width: 30px;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+}
+
+/* 画像アニメーション */
+@keyframes fadeIn {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* src変更時のフェードインアニメーション用クラス */
+  .fade-in {
+    animation: fadeIn 2s ease-out forwards;
+  }

@@ -1,0 +1,728 @@
+/*
+Theme Name: OrangeHouse10
+*/
+/*この下からCSSを書いてください*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+html, body {
+    font-size: 16px;
+    font-family: "FOT-筑紫Aオールド明朝 Pr6 R", "AGaramondPro-Regular", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+}
+
+/* common */
+.common-wrapper{
+    margin: 120px 10%;
+}
+
+.common-wrapper h1{
+    text-align: center;
+    margin-bottom: 60px;
+    color:orange;
+    font-size: 30px;
+    display:block; /*ジャンプリンクの位置調整（起点）*/
+    padding-top: 130px;
+    margin-top: -130px;/*ジャンプリンクの位置調整（終点）*/
+}
+
+/* ハンバーガーボタン */
+.hamburger__btn{
+    display: none;
+}
+.menu-sp {
+    display: none;
+}
+
+/* バツボタン */
+.batsu {
+    display: none;
+}
+
+/* モーダルウィンドウ */
+.modal-sp{
+    display: none;
+}
+
+/* add */
+.add-header-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: block;
+    width: 40%;
+    height: 100vh;
+    padding: 20px 0;
+    z-index: 2;
+}
+
+.add-header-nav li{
+    font-weight: normal;
+    margin: 50px 0 0 20px;
+    font-size: 18px;
+    color: black;
+}
+
+.add-modal-sp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: #000000aa;
+    z-index: 1;
+}
+
+/* header */
+.header{
+    position: fixed; /*ヘッダー固定（起点）*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:white;
+    opacity: 0.9;
+    z-index: 100; /*ヘッダー固定（終点）*/
+}
+.header-inner{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    height: 70px;
+}
+
+.header-logo{
+    width: 150px
+}
+
+.header-logo img {
+    width: 100%;
+}
+
+.header-nav{
+    display: flex;
+}
+
+.header-nav a{
+    position: relative;
+    padding: 10px;
+}
+
+.header-nav li {
+    margin:20px;
+}
+
+/*アニメーション：navホバー時に下線挿入*/
+.header-nav a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: orange;
+    bottom: -1px;
+    transform: scale(0, 1);
+    transform-origin: right top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;  /*変形の時間*/
+    }
+    
+.header-nav a:hover::after {
+    transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+    transform-origin: left top; /*左から右に向かう*/
+    }
+
+/* fv */
+.fv {
+    margin-top: 130px;
+    
+}
+.fv-img{
+    width: 100%;
+}
+
+.fv-img img{
+    width: 100%;
+}
+
+/* about */
+.about-block{
+    display: flex;
+}
+
+.about-block-text{
+    width: 50%;
+    margin-right: 5%;
+    line-height:1.7;
+}
+
+.about-block-text h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.about-block-text p{
+    font-size: 16px;
+    font-family:serif;
+}
+
+.about-block-img{
+    width: 50%;
+    margin-left: 5%;
+}
+
+.about-block-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* gallary */
+.gallary{
+    background-color: #E6D5BA;
+    padding: 5px 0;
+}
+
+.gallary-inner span{
+    color: white;
+}
+
+.gallary-inner {
+    margin: 120px 10%;
+}
+
+.gallary-inner h1{
+    text-align: center;
+    margin-bottom: 60px;
+    color:orange;
+    font-size: 30px;
+    display:block; /*ジャンプリンクの位置調整（起点）*/
+    padding-top: 130px;
+    margin-top: -130px;/*ジャンプリンクの位置調整（終点）*/
+}
+
+.gallary-block{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    overflow: hidden;
+    margin: 0 auto;
+    
+}
+
+.gallary-left {
+  width: calc(80% - 16px);
+}
+
+.gallary-main{
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallary-main img{
+    width: 100%;
+    height: auto; /* 画像の縦横比を維持 */
+}
+
+.gallary-inner p {
+    width: 85%;
+    margin: 15px auto;
+    color:gray;
+}
+
+.gallary-right{
+    width: 20%;
+    max-height: 100%; /* right の高さに制限 */
+    overflow-y: auto; /* スクロールを有効にする */
+}
+
+.gallary-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%; /* 親要素の高さを継承 */
+}
+
+.gallary-list img{
+    width: 100%;
+    height: auto; /* 画像の縦横比を維持 */
+    margin-bottom: 10px;
+}
+
+.gallary-list img:last-child{
+    margin-bottom: 0;
+}
+
+.gallary-list::-webkit-scrollbar {
+  width: 8px; /* 横幅 */
+}
+
+.gallary-list::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: white; /* ハンドルの色 */
+}
+
+.gallary-list::-webkit-scrollbar-track {
+  background: gray; /* 背景色 */
+}
+
+/* news */
+.news-block{
+    margin: 0 auto;
+    border: 1px solid ;
+    border-radius: 8px;
+    padding: 60px;
+    width: 60%;
+}
+
+.news-block-list{
+    display: flex;
+    padding: 10px 0;
+}
+
+.news-block-time{
+    margin-right: 50px;
+}
+
+/* price */
+.price-block{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.price-block-table{
+    width: 100%;
+}
+
+.price-block-table tr,th,td{
+    border: 1px solid;
+    padding: 20px 60px;
+    vertical-align:middle;
+    line-height: 1.5;
+}
+
+.price-block-text{
+    font-size: 12px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* reservation */
+.reservation-inner{
+    margin: 0 auto;
+}
+
+.reservation-btn {
+    margin:80px;
+    text-align: center;
+}
+
+.reservation-btn a{
+    padding: 25px 60px;
+    background-color: green;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+    width: 170px;
+    font-size: 16px;
+}
+
+.reservation-btn a:hover{
+    background-color: orange; 
+}
+
+/* 予約フォーム */
+.ContactForm7-contact {
+    max-width: 850px;
+}
+
+.ContactForm7-contact__title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.ContactForm7-contact__label {
+    font-weight: bold;
+}
+
+.ContactForm7-contact__label span {
+    font-weight: bold;
+    color: #fff;
+    background-color: orange;
+    padding: 0 10px;
+    margin: 0 5px;
+    font-size: 0.6rem;
+}
+
+.ContactForm7-contact input {
+    width: 100%;
+    border: none;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
+}
+
+.ContactForm7-contact select {
+    width: 20%;
+    border: none;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
+}
+
+.ContactForm7-contact__submit {
+    text-align: center;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.ContactForm7-contact input[type="submit"] {
+    color: #fff;
+    background-color: gray;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    margin-top: 100px;
+}
+
+.ContactForm7-contact input[type="submit"] :hover{
+    background-color: orange;
+}
+
+
+/* 送信時のメッセージ エラー文 / 送信完了文 */
+.wpcf7-not-valid-tip{
+    display: block;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.wpcf7-response-output{
+    margin: 60px auto;
+    max-width: 850px;
+}
+
+.screen-reader-response{display: none;}
+
+
+/* access */
+/* Google Mapを囲う要素 */
+.access-map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 75%; /* 比率を4:3に固定 */
+  z-index: 0;
+}
+ 
+/* Google Mapのiframe */
+.access-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.footer{
+    padding: 80px 0 30px 0;
+    background-color: rgb(87 85 85);
+    color:white;
+    line-height: 1.5;
+}
+
+.footer-inner{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.footer-copy{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 80px;
+}
+
+/* loading */
+#loading {
+    transition: all 2s; /*loadingの時間*/
+    background-color: #FFF;
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spin {
+    width: 64px;
+    height: auto;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 投稿ページ */
+.detail-page-block {
+    margin-top: 130px;
+}
+
+.detail-page-text{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    z-index: 1;
+    font-size: 50px;
+    border-bottom: solid 1px;
+    padding-bottom: 10px;
+}
+
+.detail-page-img {
+    position: relative;
+    opacity: 0.3;
+    width: 100%;
+}
+
+.detail-page-img img{
+    width: 100%;
+}
+
+.detail-page-inner {
+    margin: 120px 15%;
+    line-height: 2;
+}
+
+.detail-page-inner h1 {
+    background: linear-gradient(transparent 80%, orange 100%);
+    width: 100%;
+}
+
+.detail-page-inner h2 {
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-left: solid 5px orange;/*左線*/
+    margin: 40px 0 20px 0;
+
+}
+
+.detail-page-inner h3 {
+    border-bottom: solid 3px #494949;
+    font-weight: bold;
+    margin: 15px 0 ;
+}
+
+
+.detail-page-inner h4 {
+    font-weight: bold;
+}
+
+.detail-page-title{
+    margin-top: 150px;
+    font-size: 32px;
+}
+
+.detail-page-content{
+    margin: 80px 0 200px 0;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px){
+
+/* ハンバーガーボタン-mv */
+.hamburger__btn{
+    display: block;
+    font-size: 40px
+}
+
+/* common */
+.common-wrapper h1{
+    padding-top: 80px;
+    margin-top: -130px;/*ジャンプリンクの位置調整（終点）*/
+}
+
+/* header-mv */
+.header-inner{
+    height: 20px;
+}
+.header-logo{
+    width: 120px
+}
+
+.header-nav{
+    display: none;
+}
+
+/* fv-mv */
+.fv {
+    margin-top: 0;
+}
+
+.fv-img img {
+    height: 70vh;
+    object-fit: cover;
+    margin-top: 80px;
+}
+
+/* about-mv */
+.about-block{
+    display: block;
+}
+
+.about-block-text{
+    width: 100%;
+    margin-right: 0px;
+}
+
+.about-block-text h2{
+    font-size: 24px;
+}
+
+.about-block-img{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 40px;
+}
+
+.about-block-img img{
+    width: 100%;
+    height: 50vh;
+}
+
+/* gallary-mv */
+.gallary-block{
+    display: block;
+    width: 100%;
+}
+
+.gallary-inner {
+    margin: 60px 0;
+}
+    
+.gallary-inner P {
+    width: 100%;
+}
+
+.gallary-left {
+    display: none;
+}
+
+.gallary-right{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.gallary-list{
+    display: flex;
+    height: 100%; /* 親要素の高さを継承 */
+}
+
+.gallary-list img{
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.caption {
+    margin: 0 10%;
+}
+
+/* news-mv */
+.news-block{
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+}
+
+.news-block-list{
+    display: block;
+    padding: 20px 0;
+}
+
+.news-block-time{
+    margin-bottom: 10px;
+    margin-right: 0px;
+}
+
+/* price */
+.price-block{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.price-block-table{
+    width: 100%;
+}
+
+.price-block-table tr,th,td{
+    padding: 20px;
+}
+
+.price-block-text{
+    font-size: 12px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* reservation */
+.reservation-inner{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.reservation-btn a{
+    padding: 25px 40px;
+    width: 140px;
+}
+
+/* footer */
+.footer-inner{
+    width: 80%;
+}
+
+/* ContactForm7  */
+.ContactForm7-contact input {
+    width: 90%;
+}
+
+.ContactForm7-contact {
+    margin: 15px;
+}
+
+/* detail */
+.detail-page-inner {
+    margin: 120px 5%;
+}
+
+/* loading-mv */
+.spin {
+    width: 30px;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+}
+
+/* 画像アニメーション */
+@keyframes fadeIn {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* src変更時のフェードインアニメーション用クラス */
+  .fade-in {
+    animation: fadeIn 2s ease-out forwards;
+  }

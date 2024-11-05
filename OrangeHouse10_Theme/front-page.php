@@ -1,14 +1,26 @@
 <?php get_header() ?>
 <!-- loading -->
 <div id="loading">
-    <img src="<?=get_template_directory_uri(); ?>/img/logo.png" id="spin" alt="spin">
+    <picture>
+        <!-- ブラウザ幅最大～800pxまでsample3の画像が表示 -->
+        <source srcset="<?=get_template_directory_uri(); ?>/img/logo.png" media="(min-width: 800px)" type="image/jpg" id="spin" alt="spin">
+        <!-- ブラウザ幅800px～から最小幅までsample2の画像が表示 -->
+        <img src="<?=get_template_directory_uri(); ?>/img/logo-sp.png" alt=”spin”>
+    </picture>
+    <!-- <img src="<?=get_template_directory_uri(); ?>/img/logo.png" id="spin" alt="spin"> -->
 </div>
 <!-- loading -->
 
 <!-- fv -->
 <section class="fv">
     <div class="fv-img">
-        <img src="<?=get_template_directory_uri(); ?>/img/fv.jpg" alt="ファーストビュー">
+    <picture>
+        <!-- ブラウザ幅最大～800pxまでsample3の画像が表示 -->
+        <source srcset="<?=get_template_directory_uri(); ?>/img/fv.jpg" media="(min-width: 800px)" type="image/jpg" alt="ファーストビュー">
+        <!-- ブラウザ幅800px～から最小幅までsample2の画像が表示 -->
+        <img src="<?=get_template_directory_uri(); ?>/img/fv-sp.jpg" alt=”ファーストビュー”>
+    </picture>
+        <!-- <img src="<?=get_template_directory_uri(); ?>/img/fv.jpg" alt="ファーストビュー"> -->
     </div>
 </section>
 <!-- fv -->
@@ -19,11 +31,17 @@
         <h1 id="about">About</h1>
         <div class="about-block">
             <div class="about-block-text">
-                <h2>目の前が海のゲストハウス</h2>
-                <p>1階は古民家をリノベーションして快適な空間<br>キッチンや浴室も綺麗で快適<br>2階の寝室は、旅館のような和室で<br>ゆっくりとくつろげて旅の疲れを癒してくれます。</p>
+                <h2>海の絶景とみかんの香りに包まれる<br>癒しのゲストハウス</h2>
+                <p>愛媛県西予市明浜町に新たにオープンした「Orange House10」は、静かな町に佇む特別な宿。
+                    <br>目の前には広がる青い海、そして町全体を包み込むみかんの甘い香りが、心を和ませてくれます。
+                    <br>古民家をリノベーションしたこの空間は、温もりと居心地の良さが魅力。
+                    <br>大人数のグループでも、一人旅の方でも、心ゆくまでくつろげるひとときを提供します。
+                    <br>旅の疲れを癒し、心に残る思い出を作るために、
+                    <br>ぜひお気軽にお越しください。
+                </p>
             </div>
             <div class="about-block-img">
-                <img src="<?=get_template_directory_uri(); ?>/img/about.JPG" alt="内観">
+                <img src="<?=get_template_directory_uri(); ?>/img/about3.JPG" alt="明浜町">
             </div>
         </div>
     </div>
@@ -32,7 +50,7 @@
 
 <!-- gallary -->
 <section class="gallary">
-    <div class="gallary-inner common-wrapper">
+    <div class="gallary-inner">
         <h1 id="gallary"><span>Gallary</span></h1>
         <div class="gallary-block">
             <div class="gallary-left">
@@ -42,26 +60,35 @@
             </div>
             <div class="gallary-right"> 
                 <div class="gallary-list">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" class="thumb-img" alt="室内1">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" class="thumb-img" alt="室内2">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" class="thumb-img" alt="室内3">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary4.JPG" class="thumb-img" alt="室内4">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="室内5">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary6.JPG" class="thumb-img" alt="室内6">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary7.JPG" class="thumb-img" alt="室内7">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary8.JPG" class="thumb-img" alt="室内8">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary9.jpg" class="thumb-img" alt="室内9">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary10.JPG" class="thumb-img" alt="室内10">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary11.JPG" class="thumb-img" alt="室内11">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary12.JPG" class="thumb-img" alt="室内12">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary13.JPG" class="thumb-img" alt="室内13">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary14.JPG" class="thumb-img" alt="室内14">
-                    <img src="<?=get_template_directory_uri(); ?>/img/gallary15.jpg" class="thumb-img" alt="室内15">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary1.jpg" class="thumb-img" alt="ゲストハウス Orange House10">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary5.JPG" class="thumb-img" alt="友達との旅に最適">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary2.JPG" class="thumb-img" alt="古民家風の室内">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary11.JPG" class="thumb-img" alt="リビング">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary3.JPG" class="thumb-img" alt="清潔感ある洗面台">
+                    <img src="<?=get_template_directory_uri(); ?>/img/sea2.JPG" class="thumb-img" alt="海岸でお散歩">
+                    <img src="<?=get_template_directory_uri(); ?>/img/sea.JPG" class="thumb-img" alt="目の前は釣りの名所">
+                    <img src="<?=get_template_directory_uri(); ?>/img/buss.JPG" class="thumb-img" alt="バスのりばも目の前">
+                    <img src="<?=get_template_directory_uri(); ?>/img/dining.JPG" class="thumb-img" alt="ダイニングで乾杯">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary15.jpg" class="thumb-img" alt="縁側で非日常を味わう">
+                    <img src="<?=get_template_directory_uri(); ?>/img/about.JPG" class="thumb-img" alt="旅館のような室内">
+                    <img src="<?=get_template_directory_uri(); ?>/img/dining2.JPG" class="thumb-img" alt="自由に使えるLDK">
+                    <img src="<?=get_template_directory_uri(); ?>/img/room.JPG" class="thumb-img" alt="ドライフラワーに囲まれて">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary9.jpg" class="thumb-img" alt="本棚">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary10.JPG" class="thumb-img" alt="花柄の食器">
+                    <img src="<?=get_template_directory_uri(); ?>/img/living2.JPG" class="thumb-img" alt="キッチン">
+                    <img src="<?=get_template_directory_uri(); ?>/img/syokki.JPG" class="thumb-img" alt="食器完備">
+                    <img src="<?=get_template_directory_uri(); ?>/img/chouri.JPG" class="thumb-img" alt="調理器具完備">
+                    <img src="<?=get_template_directory_uri(); ?>/img/senmen.JPG" class="thumb-img" alt="洗濯機も使える">
+                    <img src="<?=get_template_directory_uri(); ?>/img/shower.JPG" class="thumb-img" alt="浴室">
+                    <img src="<?=get_template_directory_uri(); ?>/img/kaidan.JPG" class="thumb-img" alt="2階の寝室へ">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary8.JPG" class="thumb-img" alt="寝室前の廊下">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary14.JPG" class="thumb-img" alt="大部屋">
+                    <img src="<?=get_template_directory_uri(); ?>/img/gallary12.JPG" class="thumb-img" alt="個室も使える">
                 </div>
             </div>
         </div>
         <div class="caption" id="text">
-            <p>広々した玄関先も自由に使える！（BBQ、花火etc...）</p>
+            <p>ゲストハウス Orange House10</p>
         </div>
     </div>
 </section>
@@ -72,7 +99,7 @@
     <div class="news-inner common-wrapper">
         <h1 id="news">News</h1>
         <div class="news-block">
-            <?php $query = new WP_Query( 'cat=-4' ); ?>
+            <?php $query = new WP_Query( 'cat=-13' ); ?>
             <?php query_posts('posts_per_page='); ?> 
             <?php if($query -> have_posts()):
                 while($query -> have_posts()): $query -> the_post(); ?>
@@ -116,19 +143,9 @@
 <section class="reservation">
     <div class="reservation-inner common-wrapper">
         <h1 id="reservation">Reservation</h1>
-        <article class="page-parts__article">
-            <?php 
-            $query = new WP_Query( 'cat=4' ); 
-            if ( $query->have_posts() ) : 
-                while ( $query->have_posts() ) : $query->the_post(); ?>
-                    <div class="post-content">
-                        <?php the_content(); ?>
-                    </div>
-                <?php endwhile; 
-                wp_reset_postdata(); 
-            else : ?>
-            <?php endif; ?>
-        </article>
+        <div class="reservation-btn">
+            <a href="/reservation">宿泊予約はこちら</a>
+        </div>
     </div>
 </section> 
 <!-- reservation -->
